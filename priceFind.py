@@ -28,5 +28,3 @@ def getProducts(keywords):
         })
     finalerList = sort_by_price(finalList[:10])
     return finalerList
-
-print(getProducts(["macbook", "m1", "pro"]))
