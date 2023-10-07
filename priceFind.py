@@ -14,7 +14,7 @@ def getProducts(keywords):
     for item in keywords:
         queryString = queryString + "+" + item
     queryString = queryString[1:]
-    fullURL = 'https://www.google.com/search?q='+queryString+'&tbm=shop'
+    fullURL = 'https://www.google.com/search?q='+queryString+'&tbm=shop&tbs=mr:1,new:1'
     r = session.get(fullURL)
     itemList = r.html.find('.sh-dgr__content')
     finalList = []
