@@ -21,4 +21,3 @@ def createUser(name, email, age, priority):
         "priority": priority
     })
     
-createUser("Nic Troncoso", "nicolasltroncoso@gmail.com", 18, ["Windows 10 laptop", "iPhone 13 Pro"])
