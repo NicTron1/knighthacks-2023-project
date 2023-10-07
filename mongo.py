@@ -12,3 +12,13 @@ collection = db['User Data']
 
 def userData(email):
     return collection.find_one({"email":email})
+
+def createUser(name, email, age, priority): 
+    collection.insert_one({
+        "name": name,
+        "email": email,
+        "age": age,
+        "priority": priority
+    })
+    
+createUser("Nic Troncoso", "nicolasltroncoso@gmail.com", 18, ["Windows 10 laptop", "iPhone 13 Pro"])
