@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Add Bootstrap -->
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <title> MainPage </title>
+    <style>
+        .Title{
+            color: #6987C9;
+            text-shadow: -2px 2px 0px #413C58;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class = "Title">
+        <h1  class = "display-1 text-center text-decoration-underline">
+            <em>Project Title</em>
+        </h1>
+    </div>
+
+    <div class = "Information">
+        <p class = "lead text-center"> Insert some basic info about our app</p>
+    </div>
+ 
+    <!-- Container for the -->
+    <div class = "container">
+        <!-- Header for conversation -> is static-->
+        <div >
+            <h1 class = "h5 text-center"> Say something to me </h5>
+        </div>
+
+        <!-- response from system-->
+        <div class = "Response">
+        </div>
+
+        <!-- Box containing input from user-->
+        <div class = "CopiedInput">
+
+        </div>
+    </div>
+    
+    <!-- Takes input from user-->
+    <div class = "textBox">
+
+    </body>
+</html>
