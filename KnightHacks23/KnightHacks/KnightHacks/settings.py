@@ -23,10 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hqbmx6gcwq)^eym4w485ar^&)nx4455bm=^&2i&(k)im=f0l@v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+STATIC_ROOT = BASE_DIR / 'staticFiles'
+
+STATIC_URL = 'static/'
+
+STATICFILES_DIR = [
+    BASE_DIR / 'globalStaticFiles'
+]
 
 # Application definition
 
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FinAssist',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'KnightHacks.urls'
