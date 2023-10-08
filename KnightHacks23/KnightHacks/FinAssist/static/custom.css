@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HeaderText', sans-serif;
+    src: url('./fonts/PixelifySans-VariableFont_wght.ttf')format(truetype);
+}
+
+@font-face {
+    font-family: "AboutText";
+    src: url(./fonts/RobotoMono-VariableFont_wght.ttf)format(truetype),
+    url(./fonts/RobotoMono-Italic-VariableFont_wght.ttf)format(truetype);
+}
