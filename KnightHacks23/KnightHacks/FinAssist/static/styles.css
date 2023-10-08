@@ -1,0 +1,44 @@
+
+#container1 {
+
+    background-color: #413c58;
+    width: 1000px;
+    padding: 10px;
+    border-style: double;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+  #response{
+    padding: 10px;
+    border-color: #6987c9;
+    margin: 5px;
+    border-style: groove;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  #userPrompt{
+    padding: 10px;
+    border-color: #6987c9;
+    margin: 5px;
+    border-style: groove;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  #container2 {
+    width: 3000px;
+    padding:10px;
+  }
+
+  #submitButton{
+    background-color: white;
+    
+  }
+
+  body{
+    background-color: aliceblue;
+  }

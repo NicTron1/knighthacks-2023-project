@@ -1,40 +1,111 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang = "en-US">
-    <head>
+<html lang="en-US">
+  <link rel="stylesheet" h-ref="{% static 'styles.css' %}" />
+  <link rel="stylesheet" h-ref="{% static 'custom.css' %}" />
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}
 
-        <title>
-         Knight Hacks Royal Bank of Canada
-          Challenge Submission   
-        </title>
-    </head>
-    <body>
-        <!-- Title Div-->
-        <div class = "pageName"> Project Name </div>
-        <!--About Section or a catchy phrase-->
-        <div class = "extra"> Extra Content</div>
-        <!-- A container with the "chat" layout-->
-        <div class = "container">
-            <!-- The AI Model's response goes in here-->
-            <div class = "response" id = "response">
-                Response is here
-            </div>
-            <!-- the prompt is also sent here to be displayed to the screen-->
-            <div class = "userPrompt", id = "userPrompt"> user input is loaded here</div>
-        <!-- End of Container-->
-        </div>
+      {% endblock %}
+    </title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 
-        <!-- Another container-->
-        <div class = "container2">
-        <!-- The text box for input-->
-            <textarea type = "text" id  = "Question" name = "Question" placeholder =" Whatcha wanna know?">
-            </textarea>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .h1 {
+        color: #413c58;
+        text-align: center;
+        font-family: 'HeaderText';
+      }
+      .h6 {
+        text-align: center;
+        color: #d61159;
+      }
+      #container1 {
+        background-color: #413c58;
+      
+        height: fit-content;
+        width: 1000px;
+        padding: 10px;
+        border-style: double;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+      
+      #response {
+        height: fit-content;
+        padding: 10px;
+        border-color: #6987c9;
+        margin: 5px;
+        border-style: groove;
+        border-width: 1px;
+        border-radius: 10px;
+        background-color: white;
+      }
+      
+      #userPrompt {
+        height: fit-content;
+        padding: 10px;
+        border-color: #6987c9;
+        margin: 5px;
+        border-style: groove;
+        border-width: 1px;
+        border-radius: 10px;
+        background-color: white;
+      }
+      
+      #container2 {
+        width: 3000px;
+        padding: 10px;
+      }
+      
+      #submitButton {
+        background-color: white;
+      }
+      
+      body {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title Div -->
+    <div class="h1" id="Project_Name">Project Name</div>
+    <!-- About Section or a catchy phrase -->
+    <div class="h6" id="Extra">Extra Content</div>
+    <!-- A container with the "chat" layout -->
+    <div class="container" id="container1">
+      <!-- The AI Model's response goes in here -->
+      <div class="response" id="response">
+        <label>TechAI:</label>
+      </div>
+      <!-- the prompt is also sent here to be displayed to the screen -->
+      <div class="userPrompt" id="userPrompt">
+        <label>User:</label>
+      </div>
+      <!-- End of Container -->
+    </div>
 
-            <!-- The button sends the ask both to the userPrompt div, and to the AI model to be interpreted-->
-            <button type = "button"> Ask Away! </button>
-        </div>
+    <!-- Another container -->
+    <div class="container" id="container2">
+      <div class="form-group">
+        <!-- The text box for input -->
+        <textarea class="form-control input-sm" id="Question" rows="3" placeholder=" Whatcha wanna know?" style="display: inline"></textarea>
+        <!-- The button sends the ask both to the userPrompt div, and to the AI model to be interpreted -->
+        <button type="submit" class="material-symbols-outlined btn btn-outline-secondary btn-sm" style="background-color: #6987c9; color: white;" id="submitButton"><span class="material-symbols-outlined">send</span></button>
+      </div>
+    </div>
+    {% block content %}
 
-    </body>
+    {% endblock %}
+  </body>
 </html>
